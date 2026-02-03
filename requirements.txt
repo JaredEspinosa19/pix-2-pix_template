@@ -1,3 +1,5 @@
 tensorflow
 tensorflow[and-cuda]
 matplotlib
+tqdm
+ipython

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# TensorFlow
+
+# Resultados y logs
+resultados/
+logs/
+training_checkpoints/
+
+# Dataset
+/dataset/canny
+/dataset/canny_inverso
+/dataset/canny_inverso_erosion
+/dataset/laplaciano
+/dataset/laplaciano_inverso
+/dataset/laplaciano_inverso_erosion
+/dataset/1051 Redimensionadas
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
