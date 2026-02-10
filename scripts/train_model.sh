@@ -2,10 +2,14 @@
 
 # Script para entrenar modelo Pix2Pix
 # Uso: ./train_model.sh [nombre_algoritmo] [nombre_modelo] [steps]
+# Nota: Este script debe ejecutarse desde la raíz del proyecto
 
 # ============================================================================
 # CONFIGURACIÓN - Modifica estos parámetros según tus necesidades
 # ============================================================================
+
+# Cambiar al directorio raíz del proyecto (un nivel arriba de scripts/)
+cd "$(dirname "$0")/.." || exit 1
 
 # Algoritmo a usar (canny, laplaciano, canny_inverso, etc.)
 ALGORITMO="${1:-canny}"
@@ -28,12 +32,12 @@ IMG_HEIGHT=413
 
 # Parámetros de entrenamiento
 BATCH_SIZE=1
-LEARNING_RATE=0.0002
+LEARNING_RATE=0.0001
 LAMBDA_L1=100
 
 # Intervalos de evaluación y guardado
-EVAL_INTERVAL=1000
-SAVE_INTERVAL=5000
+EVAL_INTERVAL=10000
+SAVE_INTERVAL=50000
 
 # Directorios de checkpoints y logs
 CHECKPOINT_DIR="./training_checkpoints"

@@ -2,10 +2,14 @@
 
 # Script para realizar predicciones con todos los modelos entrenados
 # Uso: ./predict_all_models.sh
+# Nota: Este script debe ejecutarse desde la raíz del proyecto
 
 # ============================================================================
 # CONFIGURACIÓN
 # ============================================================================
+
+# Cambiar al directorio raíz del proyecto (un nivel arriba de scripts/)
+cd "$(dirname "$0")/.." || exit 1
 
 # Ground truth path
 GROUND_TRUTH_PATH="dataset/1051 Redimensionadas"

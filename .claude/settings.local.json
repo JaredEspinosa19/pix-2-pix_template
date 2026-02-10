@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash train_model.sh:*)"
+    ]
+  }
+}

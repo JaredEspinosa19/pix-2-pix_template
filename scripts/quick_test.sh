@@ -3,10 +3,14 @@
 # Script para hacer una prueba rápida del entrenamiento
 # Entrena por pocos pasos para verificar que todo funciona
 # Uso: ./quick_test.sh [algoritmo]
+# Nota: Este script debe ejecutarse desde la raíz del proyecto
 
 # ============================================================================
 # CONFIGURACIÓN
 # ============================================================================
+
+# Cambiar al directorio raíz del proyecto (un nivel arriba de scripts/)
+cd "$(dirname "$0")/.." || exit 1
 
 ALGORITMO="${1:-canny}"
 NOMBRE_MODELO="${ALGORITMO}_test"

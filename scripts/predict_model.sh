@@ -2,10 +2,14 @@
 
 # Script para realizar predicciones con modelo Pix2Pix entrenado
 # Uso: ./predict_model.sh [nombre_modelo] [algoritmo]
+# Nota: Este script debe ejecutarse desde la raíz del proyecto
 
 # ============================================================================
 # CONFIGURACIÓN - Modifica estos parámetros según tus necesidades
 # ============================================================================
+
+# Cambiar al directorio raíz del proyecto (un nivel arriba de scripts/)
+cd "$(dirname "$0")/.." || exit 1
 
 # Nombre del modelo entrenado
 NOMBRE_MODELO="${1:-canny_model}"

@@ -2,6 +2,23 @@
 
 Este proyecto incluye varios scripts de bash para facilitar el entrenamiento y la predicción de modelos.
 
+## ⚡ Importante: Los Scripts se Ejecutan desde la Raíz
+
+Todos los scripts en esta carpeta **automáticamente cambian al directorio raíz del proyecto** antes de ejecutarse. Esto significa que puedes ejecutarlos desde cualquier ubicación:
+
+```bash
+# Desde la raíz (recomendado)
+./scripts/train_model.sh canny
+
+# Desde dentro de scripts/
+cd scripts && ./train_model.sh canny
+
+# Desde cualquier otra ubicación
+cd dataset && ../scripts/train_model.sh canny
+```
+
+**Todos funcionan igual** - no necesitas preocuparte por las rutas. Ver [EJECUCION.md](EJECUCION.md) para más detalles.
+
 ## Scripts Disponibles
 
 ### 1. `train_model.sh` - Entrenar un Modelo Individual

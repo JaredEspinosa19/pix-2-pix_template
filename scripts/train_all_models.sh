@@ -2,10 +2,14 @@
 
 # Script para entrenar todos los modelos secuencialmente
 # Uso: ./train_all_models.sh [steps]
+# Nota: Este script debe ejecutarse desde la raíz del proyecto
 
 # ============================================================================
 # CONFIGURACIÓN
 # ============================================================================
+
+# Cambiar al directorio raíz del proyecto (un nivel arriba de scripts/)
+cd "$(dirname "$0")/.." || exit 1
 
 # Número de pasos para cada modelo (default: 500000)
 STEPS="${1:-500000}"

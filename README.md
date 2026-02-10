@@ -87,28 +87,43 @@ pix-2-pix_template/
 
 ## Inicio Rápido
 
-### Opción 1: Usando Scripts de Bash (Recomendado) 🚀
+### Opción 1: Usando Scripts (Recomendado) 🚀
 
-Los scripts de bash facilitan el entrenamiento y predicción con configuración sencilla.
+Los scripts facilitan el entrenamiento y predicción con configuración sencilla.
 
+**En Windows (CMD/PowerShell):**
+```cmd
+REM 1. Organizar dataset
+python organize.py
+
+REM 2. Prueba rápida
+scripts\quick_test.bat canny
+
+REM 3. Entrenar modelo
+scripts\train_model.bat canny
+
+REM 4. Hacer predicciones
+scripts\predict_model.bat canny_model canny
+```
+
+**En Linux/Mac (Bash):**
 ```bash
 # 1. Organizar dataset
 python organize.py
 
-# 2. Prueba rápida (100 steps)
-./run_script.sh quick_test canny
-# O directamente: ./scripts/quick_test.sh canny
+# 2. Prueba rápida
+./scripts/quick_test.sh canny
 
 # 3. Entrenar modelo
-./run_script.sh train_model canny
-# O directamente: ./scripts/train_model.sh canny
+./scripts/train_model.sh canny
 
 # 4. Hacer predicciones
-./run_script.sh predict_model canny_model canny
-# O directamente: ./scripts/predict_model.sh canny_model canny
+./scripts/predict_model.sh canny_model canny
 ```
 
-**Ver guía completa**: [scripts/README.md](scripts/README.md)
+**Ver guías completas**:
+- Windows: [scripts/WINDOWS.md](scripts/WINDOWS.md) 🪟
+- Linux/Mac: [scripts/README.md](scripts/README.md) 🐧
 
 ### Opción 2: Usando Python Directamente
 
